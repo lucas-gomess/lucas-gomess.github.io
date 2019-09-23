@@ -5,17 +5,87 @@
 body {
 background-color: #000000
 }
-</style>
-     form {
-    /* Apenas para centralizar o form na página */
-    margin: 0 auto;
-    width: 400px;
-    /* Para ver as bordas do formulário */
-    padding: 1em;
-    border: 1px solid #CCC;
-    border-radius: 1em;
+      *{ margin:0; padding:0;}
+ 
+body{ font:100% normal Arial, Helvetica, sans-serif; background:#161712;}
+ 
+form,input,select,textarea{margin:0; padding:0; color:#ffffff;}
+ 
+div.box {
+    margin:0 auto;
+    width:500px;
+    background:#222222;
+    position:relative;
+    top:50px;
+    border:1px solid #262626;
 }
-     
+ 
+div.box h1 { 
+    color:#ffffff;
+    font-size:18px;
+    text-transform:uppercase;
+    padding:5px 0 5px 5px;
+    border-bottom:1px solid #161712;
+    border-top:1px solid #161712; 
+}
+ 
+div.box label {
+    width:100%;
+    display: block;
+    background:#1C1C1C;
+    border-top:1px solid #262626;
+    border-bottom:1px solid #161712;
+    padding:10px 0 10px 0;
+}
+ 
+div.box label span {
+    display: block;
+    color:#bbbbbb;
+    font-size:12px;
+    float:left;
+    width:100px;
+    text-align:right;
+    padding:5px 20px 0 0;
+}
+ 
+div.box .input_text {
+    padding:10px 10px;
+    width:200px;
+    background:#262626;
+    border-bottom: 1px double #171717;
+    border-top: 1px double #171717;
+    border-left:1px double #333333;
+    border-right:1px double #333333;
+}
+ 
+div.box .message{
+    padding:7px 7px;
+    width:350px;
+    background:#262626;
+    border-bottom: 1px double #171717;
+    border-top: 1px double #171717;
+    border-left:1px double #333333;
+    border-right:1px double #333333;
+    overflow:hidden;
+    height:150px;
+}
+ 
+div.box .button{
+    margin:0 0 10px 0;
+    padding:4px 7px;
+    background:#CC0000;
+    border:0px;
+    position: relative;
+    top:10px;
+    left:382px;
+    width:100px;
+    border-bottom: 1px double #660000;
+    border-top: 1px double #660000;
+    border-left:1px double #FF0033;
+    border-right:1px double #FF0033;
+}
+</style>
+    
   
      <!--Import Google Icon Font-->
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -46,23 +116,33 @@ background-color: #000000
     <li><a href="contato.html">Contato</a></li>
 
   </ul>
-<form action="/pagina-processa-dados-do-form" method="post">
-    <div>
-        <label for="name">Nome:</label>
-        <input type="text" id="name" />
+<form name="meuForm" method="post" id="formulario">
+    <div class="box"> 
+        <h1>Formulario de Contato :</h1>
+  
+        <label> 
+            <span>Nome Completo</span>
+            <input type="text" class="input_text" name="nome" id="name"/>
+  
+        </label>
+  
+        <label>
+            <span>Email</span>
+            <input type="text" class="input_text" name="email" id="email"/>
+         </label>
+  
+        <label>
+            <span>Assunto</span>
+            <input type="text" class="input_text" name="assunto" id="subject"/>
+        </label>
+  
+        <label>
+             <span>Mensagem</span>
+            <textarea class="message" name="feedback" id="feedback"></textarea>
+            <input type="button" class="button" value="Enviar" />
+        </label>           
     </div>
-    <div>
-        <label for="mail">E-mail:</label>
-        <input type="email" id="mail" />
-    </div>
-    <div>
-        <label for="msg">Mensagem:</label>
-        <textarea id="msg"></textarea>
-    </div>
-    <div class="button">
-        <button type="submit">Enviar sua mensagem</button>
-    </div>
-</form>
+</form> 
 
       <!--JavaScript at end of body for optimized loading-->
       <script type="text/javascript" src="../js/materialize.min.js"></script>
