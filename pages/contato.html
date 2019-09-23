@@ -5,85 +5,36 @@
 body {
 background-color: #000000
 }
-      *{ margin:0; padding:0;}
- 
-body{ font:100% normal Arial, Helvetica, sans-serif; background:#161712;}
- 
-form,input,select,textarea{margin:0; padding:0; color:#ffffff;}
- 
-div.box {
-    margin:0 auto;
-    width:500px;
-    background:#222222;
-    position:relative;
-    top:50px;
-    border:1px solid #262626;
+ input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
- 
-div.box h1 { 
-    color:#ffffff;
-    font-size:18px;
-    text-transform:uppercase;
-    padding:5px 0 5px 5px;
-    border-bottom:1px solid #161712;
-    border-top:1px solid #161712; 
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
- 
-div.box label {
-    width:100%;
-    display: block;
-    background:#1C1C1C;
-    border-top:1px solid #262626;
-    border-bottom:1px solid #161712;
-    padding:10px 0 10px 0;
+
+input[type=submit]:hover {
+  background-color: #45a049;
 }
- 
-div.box label span {
-    display: block;
-    color:#bbbbbb;
-    font-size:12px;
-    float:left;
-    width:100px;
-    text-align:right;
-    padding:5px 20px 0 0;
-}
- 
-div.box .input_text {
-    padding:10px 10px;
-    width:200px;
-    background:#262626;
-    border-bottom: 1px double #171717;
-    border-top: 1px double #171717;
-    border-left:1px double #333333;
-    border-right:1px double #333333;
-}
- 
-div.box .message{
-    padding:7px 7px;
-    width:350px;
-    background:#262626;
-    border-bottom: 1px double #171717;
-    border-top: 1px double #171717;
-    border-left:1px double #333333;
-    border-right:1px double #333333;
-    overflow:hidden;
-    height:150px;
-}
- 
-div.box .button{
-    margin:0 0 10px 0;
-    padding:4px 7px;
-    background:#CC0000;
-    border:0px;
-    position: relative;
-    top:10px;
-    left:382px;
-    width:100px;
-    border-bottom: 1px double #660000;
-    border-top: 1px double #660000;
-    border-left:1px double #FF0033;
-    border-right:1px double #FF0033;
-}
+
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+} 
 </style>
     
   
@@ -116,33 +67,24 @@ div.box .button{
     <li><a href="contato.html">Contato</a></li>
 
   </ul>
-<form name="meuForm" method="post" id="formulario">
-    <div class="box"> 
-        <h1>Formulario de Contato :</h1>
+<div>
+  <form action="/action_page.php">
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+    <label for="country">Country</label>
+    <select id="country" name="country">
+      <option value="australia">Australia</option>
+      <option value="canada">Canada</option>
+      <option value="usa">USA</option>
+    </select>
   
-        <label> 
-            <span>Nome Completo</span>
-            <input type="text" class="input_text" name="nome" id="name"/>
-  
-        </label>
-  
-        <label>
-            <span>Email</span>
-            <input type="text" class="input_text" name="email" id="email"/>
-         </label>
-  
-        <label>
-            <span>Assunto</span>
-            <input type="text" class="input_text" name="assunto" id="subject"/>
-        </label>
-  
-        <label>
-             <span>Mensagem</span>
-            <textarea class="message" name="feedback" id="feedback"></textarea>
-            <input type="button" class="button" value="Enviar" />
-        </label>           
-    </div>
-</form> 
+    <input type="submit" value="Submit">
+  </form>
+</div>
 
       <!--JavaScript at end of body for optimized loading-->
       <script type="text/javascript" src="../js/materialize.min.js"></script>
