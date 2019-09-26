@@ -2,7 +2,7 @@
   "name": "ACE",
   "short_name": "ACE",
   "theme_color": "#008eff",
-  "background_color": "#000000",
+  "background_color": "#0000FF",
   "display": "standalone",
   "Scope": "/",
   "start_url": "/index.html",
