@@ -1,7 +1,7 @@
 {
   "name": "ACE",
   "short_name": "ACE",
-  "theme_color": "#008eff",
+  "theme_color": "#2188f3",
   "background_color": "#2188f3",
   "display": "standalone",
   "Scope": "/",
