@@ -169,7 +169,7 @@ background-color: #000000
                         console.log('Upload is running');
                         break;
                 }
-            },
+            }
             function(error) {
                 switch (error.code) {
                     case 'storage/unauthorized':
@@ -179,7 +179,7 @@ background-color: #000000
                     case 'storage/unknown':
                         break;
                 }
-            },
+            }
             function() {
                 uploadTask.snapshot.ref.getDownloadURL().then(function(downloadURL) {
                     console.log('File available at', downloadURL);
