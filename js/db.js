@@ -15,9 +15,10 @@ db.enablePersistence()
 db.collection('atividades').onSnapshot(snapshot => {
     snapshot.docChanges().forEach(change => {
         if (change.type === 'added') {
-            renderRecipe(change.doc.data(), change.doc.id);
+            desenhaCard(change.doc.data(), change.doc.id);
         }
         if (change.type === 'removed') {
+             removeCard(change.doc.id);
              // remover da pagina tambem
         }
     });
@@ -32,7 +33,7 @@ form.addEventListener('submit', evt => {
         
 alunoqueadicionouaatividade: form.atividadeAluno.value,
         atividade: form.atividadeAdicionar.value,
-        descricao: form.atividadeDescricao.value,
+        descrição: form.atividadeDescricao.value,
         disciplina: form.atividadeDisciplina.value,
         horario: form.atividadeHorario.value
     };
