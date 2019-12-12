@@ -34,7 +34,7 @@ const desenhaCard = (data, id) => {
     atividades.innerHTML += html;
 
 };
-move recipe
+
 const removeCard = (id) => {
   const ativ = document.querySelector(`.atividade[data-id=${id}]`);
   ativ.remove();
