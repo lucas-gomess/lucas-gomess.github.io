@@ -30,7 +30,12 @@ const desenhaCard = (data, id) => {
           <a href="https://www.calendarioonline.com.br/calendario-2019/">Ver o Calendário</a>
         </div>
       </div>
-    </div>
-    sobremesas.innerHTML += html;
+    </div>`;
+    atividades.innerHTML += html;
 
+};
+move recipe
+const removeCard = (id) => {
+  const ativ = document.querySelector(`.atividade[data-id=${id}]`);
+  ativ.remove();
 };
